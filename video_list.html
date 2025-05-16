@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> ITSK 주행환경 </title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body class="c-scrollbar">
+  <div id="wrapper">
+    <div id="container">
+      <div class="lnb-wrap">
+        <h1><a href="#"></a></h1>
+        <a href="#" class="btn-menu"></a>
+        <h2 class="hide">메뉴</h2>
+        <ul class="lnb" data-active="4">
+          <li class="drive">
+            <a href="#">
+              <span class="ico"></span>
+              <span class="text">주행환경 검색</span>
+            </a>
+          </li>
+          <li class="scenario">
+            <a href="#">
+              <span class="ico"></span>
+              <span class="text">시나리오 통계</span>
+            </a>
+          </li>
+          <li class="video">
+            <a href="#">
+              <span class="ico"></span>
+              <span class="text">영상정보 등록</span>
+            </a>
+          </li>
+          <li class="history">
+            <a href="#">
+              <span class="ico"></span>
+              <span class="text">영상정보 이력</span>
+            </a>
+          </li>
+          <li class="data">
+            <a href="#">
+              <span class="ico"></span>
+              <span class="text">데이터 모니터링</span>
+            </a>
+          </li>
+        </ul>
+        <a href="#" class="btn-logout"></a>
+      </div><!-- .lnb-wrap -->
+      <div class="content-wrap">
+        <div class="tit-area">
+          <h3 class="history">영상정보 이력</h3>
+        </div>
+        <div class="total-area">
+          <span class="label">Total</span>
+          <span class="num"><strong>123,456</strong>개</span>
+        </div>
+        <div class="tb-wrap radius-8">
+          <div class="tb-head">
+            <table summary="영상정보 이력" class="tb-list">
+              <colgroup>
+                <col width="55" />
+                <col width="200" />
+                <col width="100" />
+                <col width="*" />
+                <col width="400" />
+                <col width="280" />
+                <col width="140" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">순서</th>
+                  <th scope="col">수집일시</th>
+                  <th scope="col">영상분류</th>
+                  <th scope="col">시나리오 유형</th>
+                  <th scope="col">태그 정보</th>
+                  <th scope="col">영상 파일</th>
+                  <th scope="col">
+                    <div class="th-tip">
+                      <span>진행사항</span>
+                      <a href="#tip-progress" class="btn-tip">팁</a>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tip-area edge-right" id="tip-progress" style="right: 40px;top: 28px;">
+            <p class="s-tit">진행상황</p>
+            <a href="#" class="btn-close"></a>
+            <ul class="s-list">
+              <li>- 처리전 : 사용자가 영상 업로드를 한 상태</li>
+              <li>- 처리중 : 시스템에서 영상을 일정 주기로 조회하고 처리하는 상태</li>
+              <li>- 처리완료 : 영상분석을 완료한 상태</li>
+            </ul>
+          </div>
+          <div class="tb-body">
+            <table summary="영상 ODD 태그 정보" class="tb-list">
+              <colgroup>
+                <col width="55" />
+                <col width="200" />
+                <col width="100" />
+                <col width="*" />
+                <col width="400" />
+                <col width="280" />
+                <col width="140" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2023-07-23 14:00 ~ 14:10</td>
+                  <td>
+                    <span class="s-label purple">고정식</span>
+                  </td>
+                  <td>Cut-in&out 반복, Cut-through, Cut-in, Cut-out,Cut-in&out 반복, Cut-through, Cut-in, Cut-outCut-in&out 반복, Cut-through, Cut-in, Cut-out, Cut-in, Cut-out, Cut-in, Cut-out</td>
+                  <td>#사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그</td>
+                  <td>
+                    <ul>
+                      <li><a href="#">20230728영상20230728</a></li>
+                      <li><a href="#">20230728영상20230728</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <span class="s-state before">처리전</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>2023-07-23 14:00 ~ 14:10</td>
+                  <td>
+                    <span class="s-label purple">고정식</span>
+                  </td>
+                  <td>Cut-in&out 반복, Cut-through, Cut-in, Cut-out,Cut-in&out 반복</td>
+                  <td>#사용자 태그 #사용자 태그 #사용자 태그</td>
+                  <td>
+                    <ul>
+                      <li><a href="#">20230728영상20230728</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <span class="s-state before">처리전</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>2023-07-23 14:00 ~ 14:10</td>
+                  <td>
+                    <span class="s-label green">이동식</span>
+                  </td>
+                  <td>Cut-in, Cut-out,Cut-in&out 반복</td>
+                  <td>#사용자 태그 #사용자 태그 #사용자 태그</td>
+                  <td>
+                    <ul>
+                      <li><a href="#" class="ellipsis">20자이상 말줄임 20자이상 말줄임 20자이상 말줄임 20자이상 말줄임 20자이상 말줄임 </a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <span class="s-state before">처리전</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>2023-07-23 14:00 ~ 14:10</td>
+                  <td>
+                    <span class="s-label purple">고정식</span>
+                  </td>
+                  <td>Cut-in&out 반복</td>
+                  <td>#사용자 태그 #사용자 태그 #사용자 태그</td>
+                  <td>
+                    <ul>
+                      <li><a href="#" class="ellipsis">20230728영상 20230728영상 20230728GPS 20230728GPS</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <span class="s-state ing">처리중</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>2023-07-23 14:00 ~ 14:10</td>
+                  <td>
+                    <span class="s-label purple">고정식</span>
+                  </td>
+                  <td>Max Text 50 1Line <br />Max Text 50  1Line 말줄임 없음</td>
+                  <td>#사용자 태그 #사용자 태그 #사용자 태그</td>
+                  <td>
+                    <ul>
+                      <li><a href="#" class="ellipsis">Text2 line ...</a></li>
+                      <li><a href="#">Link</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <span class="s-state ing">처리중</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>2023-07-23 14:00 ~ 14:10</td>
+                  <td>
+                    <span class="s-label green">이동식</span>
+                  </td>
+                  <td>Cut-in&out 반복, Cut-through, Cut-in, Cut-out,Cut-in&out 반복</td>
+                  <td>#사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그</td>
+                  <td>
+                    <ul>
+                      <li><a href="#" class="ellipsis">20230728영상 20230728영상 20230728GPS 20230728GPS</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <span class="s-state ing">처리중</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>2023-07-23 14:00 ~ 14:10</td>
+                  <td>
+                    <span class="s-label green">이동식</span>
+                  </td>
+                  <td>Cut-in&out 반복, Cut-through, Cut-in, Cut-out,Cut-in&out 반복</td>
+                  <td>#사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그</td>
+                  <td>
+                    <ul>
+                      <li><a href="#" class="ellipsis">다운로드 링크 1</a></li>
+                      <li><a href="#" class="ellipsis">다운로드 링크 2</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <span class="s-state ing">처리중</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>2023-07-23 14:00 ~ 14:10</td>
+                  <td>
+                    <span class="s-label purple">고정식</span>
+                  </td>
+                  <td>Cut-in&out 반복, Cut-through, Cut-in, Cut-out,Cut-in&out 반복</td>
+                  <td>#사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그</td>
+                  <td>
+                    <ul>
+                      <li><a href="#" class="ellipsis">20230728영상 20230728영상 20230728GPS 20230728GPS</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <span class="s-state ing">처리중</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>2023-07-23 14:00 ~ 14:10</td>
+                  <td>
+                    <span class="s-label purple">고정식</span>
+                  </td>
+                  <td>Cut-in&out 반복, Cut-through, Cut-in, Cut-out,Cut-in&out 반복</td>
+                  <td>#사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그</td>
+                  <td>
+                    <ul>
+                      <li><a href="#" class="ellipsis">20230728영상 20230728영상 20230728GPS 20230728GPS</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <span class="s-state ing">처리중</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>2023-07-23 14:00 ~ 14:10</td>
+                  <td>
+                    <span class="s-label purple">고정식</span>
+                  </td>
+                  <td>Cut-in&out 반복, Cut-through, Cut-in, Cut-out,Cut-in&out 반복</td>
+                  <td>#사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그</td>
+                  <td>
+                    <ul>
+                      <li><a href="#" class="ellipsis">20230728영상 20230728영상 20230728GPS 20230728GPS</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <span class="s-state ing">처리중</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>2023-07-23 14:00 ~ 14:10</td>
+                  <td>
+                    <span class="s-label purple">고정식</span>
+                  </td>
+                  <td>Cut-in&out 반복, Cut-through, Cut-in, Cut-out,Cut-in&out 반복</td>
+                  <td>#사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그</td>
+                  <td>
+                    <ul>
+                      <li><a href="#" class="ellipsis">20230728영상 20230728영상 20230728GPS 20230728GPS</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <span class="s-state ing">처리중</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>2023-07-23 14:00 ~ 14:10</td>
+                  <td>
+                    <span class="s-label purple">고정식</span>
+                  </td>
+                  <td>Cut-in&out 반복, Cut-through, Cut-in, Cut-out,Cut-in&out 반복</td>
+                  <td>#사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그</td>
+                  <td>
+                    <ul>
+                      <li><a href="#" class="ellipsis">20230728영상 20230728영상 20230728GPS 20230728GPS</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <span class="s-state ing">처리중</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td>2023-07-23 14:00 ~ 14:10</td>
+                  <td>
+                    <span class="s-label purple">고정식</span>
+                  </td>
+                  <td>Cut-in&out 반복, Cut-through, Cut-in, Cut-out,Cut-in&out 반복</td>
+                  <td>#사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그</td>
+                  <td>
+                    <ul>
+                      <li><a href="#" class="ellipsis">20230728영상 20230728영상 20230728GPS 20230728GPS</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <span class="s-state purple">GPS파일없음</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td>2023-07-23 14:00 ~ 14:10</td>
+                  <td>
+                    <span class="s-label purple">고정식</span>
+                  </td>
+                  <td>Cut-in&out 반복, Cut-through, Cut-in, Cut-out,Cut-in&out 반복</td>
+                  <td>#사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그</td>
+                  <td>
+                    <ul>
+                      <li><a href="#" class="ellipsis">20230728영상 20230728영상 20230728GPS 20230728GPS</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <span class="s-state purple">GPS파일없음</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td>2023-07-23 14:00 ~ 14:10</td>
+                  <td>
+                    <span class="s-label purple">고정식</span>
+                  </td>
+                  <td>Cut-in&out 반복, Cut-through, Cut-in, Cut-out,Cut-in&out 반복</td>
+                  <td>#사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그</td>
+                  <td>
+                    <ul>
+                      <li><a href="#" class="ellipsis">20230728영상 20230728영상 20230728GPS 20230728GPS</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <span class="s-state complete">처리완료</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td>2023-07-23 14:00 ~ 14:10</td>
+                  <td>
+                    <span class="s-label purple">고정식</span>
+                  </td>
+                  <td>Cut-in&out 반복, Cut-through, Cut-in, Cut-out,Cut-in&out 반복</td>
+                  <td>#사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그</td>
+                  <td>
+                    <ul>
+                      <li><a href="#" class="ellipsis">20230728영상 20230728영상 20230728GPS 20230728GPS</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <span class="s-state complete">처리완료</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>17</td>
+                  <td>2023-07-23 14:00 ~ 14:10</td>
+                  <td>
+                    <span class="s-label green">이동식</span>
+                  </td>
+                  <td>Cut-in&out 반복, Cut-through, Cut-in, Cut-out,Cut-in&out 반복</td>
+                  <td>#사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그</td>
+                  <td>
+                    <ul>
+                      <li><a href="#" class="ellipsis">20230728영상 20230728영상 20230728GPS 20230728GPS</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <span class="s-state complete">처리완료</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td>2023-07-23 14:00 ~ 14:10</td>
+                  <td>
+                    <span class="s-label green">이동식</span>
+                  </td>
+                  <td>Cut-in&out 반복, Cut-through, Cut-in, Cut-out,Cut-in&out 반복</td>
+                  <td>#사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그 #사용자 태그</td>
+                  <td>
+                    <ul>
+                      <li><a href="#" class="ellipsis">20230728영상 20230728영상 20230728GPS 20230728GPS</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <span class="s-state complete">처리완료</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div><!-- .tb-wrap -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+    <div class="loading-dimm"></div>
+    <div class="loading-wrp"><div class="loader"></div></div>
+  </div><!-- #wrapper -->
+  <script>
+    $('.tb-wrap .th-tip .btn-tip').on('click', function(){
+      if ($(this).hasClass('on')) {
+        $('.tb-wrap .tip-area').hide();
+      }
+    });
+    $('.tb-wrap .tip-area .btn-close').on('click', function(){
+      $('.tb-wrap .th-tip .btn-tip.on').removeClass('on');
+    });
+    
+    var queryLnb = $.urlParam('lnb');
+    var queryTooltip = $.urlParam('tooltip');
+    var queryLoading = $.urlParam('loading');
+
+    if (Boolean(queryTooltip)) {
+      setTimeout(function(){
+        $('[href="#tip-progress"]').click();
+      }, 500);
+    }
+    if (Boolean(queryLnb)) {
+      setTimeout(function(){
+        $('.lnb-wrap .btn-menu').click();
+      }, 250);
+    }
+    if (Boolean(queryLoading)) {
+      GUI.loadingUI('open');
+    }
+
+    function loadingTest() {
+      GUI.loadingUI('open');
+      setTimeout(function(){
+        GUI.loadingUI('close');
+      }, 3000);
+    }
+  </script>
+</body>
+</html>

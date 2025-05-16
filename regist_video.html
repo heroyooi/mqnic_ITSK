@@ -1,0 +1,2510 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> ITSK 주행환경 </title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body class="c-scrollbar">
+  <div id="wrapper">
+    <div id="container">
+      <div class="lnb-wrap">
+        <h1><a href="#"></a></h1>
+        <a href="#" class="btn-menu"></a>
+        <h2 class="hide">메뉴</h2>
+        <ul class="lnb" data-active="3">
+          <li class="drive">
+            <a href="#">
+              <span class="ico"></span>
+              <span class="text">주행환경 검색</span>
+            </a>
+          </li>
+          <li class="scenario">
+            <a href="#">
+              <span class="ico"></span>
+              <span class="text">시나리오 통계</span>
+            </a>
+          </li>
+          <li class="video">
+            <a href="#">
+              <span class="ico"></span>
+              <span class="text">영상정보 등록</span>
+            </a>
+          </li>
+          <li class="history">
+            <a href="#">
+              <span class="ico"></span>
+              <span class="text">영상정보 이력</span>
+            </a>
+          </li>
+          <li class="data">
+            <a href="#">
+              <span class="ico"></span>
+              <span class="text">데이터 모니터링</span>
+            </a>
+          </li>
+        </ul>
+        <a href="#" class="btn-logout"></a>
+      </div><!-- .lnb-wrap -->
+      <div class="content-wrap">
+        <div class="tit-area">
+          <h3 class="video">영상정보 목록</h3>
+        </div>
+        <ul class="regist-list">
+          <li>
+            <div class="tit-wrp">
+              <p class="tit essential">기본정보</p>
+            </div>
+            <div class="regist-form">
+              <ul class="form-list">
+                <li>
+                  <span class="label">수집일시</span>
+                  <div class="input-flex">
+                    <div class="input-wrap" style="z-index: 1;">
+                      <div class="date-wrap">
+                        <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+                          <input type="text" id="datepicker-input" aria-label="Date-Time">
+                          <span class="tui-ico-date"></span>
+                        </div>
+                        <div class="date_wrapper" style="margin-top: -1px;"></div>
+                      </div>
+                      <div class="select-wrap">
+                        <span class="select-base">
+                          <span class="value"></span>
+                          <select>
+                            <option value="0" selected>00</option>
+                            <option value="1">Value 1</option>
+                            <option value="2">Value 2</option>
+                            <option value="3">Value 3</option>
+                          </select>
+                        </span>
+                        <span class="unit">시</span>
+                      </div>
+                      <div class="select-wrap">
+                        <span class="select-base">
+                          <span class="value"></span>
+                          <select>
+                            <option value="0" selected>00</option>
+                            <option value="1">Value 1</option>
+                            <option value="2">Value 2</option>
+                            <option value="3">Value 3</option>
+                          </select>
+                        </span>
+                        <span class="unit">분</span>
+                      </div>
+                      <span class="bridge">~</span>
+                      <div class="select-wrap">
+                        <span class="select-base">
+                          <span class="value"></span>
+                          <select>
+                            <option value="0" selected>00</option>
+                            <option value="1">Value 1</option>
+                            <option value="2">Value 2</option>
+                            <option value="3">Value 3</option>
+                          </select>
+                        </span>
+                        <span class="unit">시</span>
+                      </div>
+                      <div class="select-wrap">
+                        <span class="select-base">
+                          <span class="value"></span>
+                          <select>
+                            <option value="0" selected>00</option>
+                            <option value="1">Value 1</option>
+                            <option value="2">Value 2</option>
+                            <option value="3">Value 3</option>
+                          </select>
+                        </span>
+                        <span class="unit">분</span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <span class="label">영상분류</span>
+                  <div class="input-flex">
+                    <div class="btns-wrap">
+                      <span class="radio-base radio-button">
+                        <input type="radio" id="radio_button_type1" name="radio_button_type" checked>
+                        <label for="radio_button_type1">이동식 영상</label>
+                      </span>
+                      <span class="radio-base radio-button">
+                        <input type="radio" id="radio_button_type2" name="radio_button_type">
+                        <label for="radio_button_type2">고정식 영상</label>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+                <li class="radio_type_area">
+                  <span class="label"></span>
+                  <div class="input-flex">
+                    
+                    <!-- 이동식 영상 -->
+                    <ul class="radio-list">
+                      <li class="tit">차종</li>
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-type-1" name="radio-type" checked>
+                          <label for="radio-type-1">승용차</label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-type-2" name="radio-type">
+                          <label for="radio-type-2">승합차</label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-type-3" name="radio-type">
+                          <label for="radio-type-3">버스</label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-type-4" name="radio-type">
+                          <label for="radio-type-4">화물차</label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-type-5" name="radio-type">
+                          <label for="radio-type-5">긴급차</label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-type-6" name="radio-type">
+                          <label for="radio-type-6">초소형 전기차</label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-type-7" name="radio-type">
+                          <label for="radio-type-7">오토바이</label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-type-8" name="radio-type">
+                          <label for="radio-type-8">기타</label>
+                        </span>
+                      </li>
+                    </ul>
+
+                    <!-- 고정식 영상 -->
+                    <div class="result-info" style="display: none;">
+                      <span class="tit">위치</span>
+                      <span class="result-area">
+                        <span class="path">고속도로 > 경부고속도로 > 서초</span>
+                        <span class="btn-base si btn-popup-anim-1"><a href="#popup-fixed-video-info">수정</a></span>
+                      </span>
+                    </div>
+
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="tit-wrp">
+              <p class="tit essential">시나리오 유형</p>
+              <span class="info">업로드 영상의 시나리오 유형을 <em>최대 3개</em>까지 선택 가능합니다.</span>
+            </div>
+            <div class="regist-form">
+              <ul class="chk-list">
+                <li>
+                  <span class="chk-base">
+                    <input type="checkbox" id="chk-1" checked>
+                    <label for="chk-1">주행</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="chk-base">
+                    <input type="checkbox" id="chk-2" checked>
+                    <label for="chk-2">역주행</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="chk-base">
+                    <input type="checkbox" id="chk-3" checked>
+                    <label for="chk-3">Cut-in</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="chk-base">
+                    <input type="checkbox" id="chk-4">
+                    <label for="chk-4">Cut-out</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="chk-base">
+                    <input type="checkbox" id="chk-5">
+                    <label for="chk-5">Cut-in&out 반복</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="chk-base">
+                    <input type="checkbox" id="chk-6">
+                    <label for="chk-6">Cut-through</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="chk-base">
+                    <input type="checkbox" id="chk-7">
+                    <label for="chk-7">급정지/감속</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="chk-base">
+                    <input type="checkbox" id="chk-8">
+                    <label for="chk-8">정지상태/정차</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="chk-base">
+                    <input type="checkbox" id="chk-9">
+                    <label for="chk-9">날아오는 장애물</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="chk-base">
+                    <input type="checkbox" id="chk-10">
+                    <label for="chk-10">군집주행</label>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="tit-wrp w-tip">
+              <p class="tit">환경요소</p>
+              <a href="#popup-enviroment-info" class="btn-tip btn-popup-anim-1">팁</a>
+            </div>
+            <div class="regist-form radio_type_area">
+              <div class="form-top">
+                <span class="info">API를 통해서 기상정보를 자동으로 등록합니다.</span>
+                <ul class="radio-list">
+                  <li>
+                    <span class="radio-base">
+                      <input type="radio" id="radio-autosave-1" name="radio-autosave">
+                      <label for="radio-autosave-1">예</label>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="radio-base">
+                      <input type="radio" id="radio-autosave-2" name="radio-autosave" checked>
+                      <label for="radio-autosave-2">아니오</label>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- 이동식 영상 -->
+              <ul class="form-list form-list-tp1">
+                <li>
+                  <span class="label">기온</span>
+                  <div class="input-flex">
+                    <div class="input-wrap">
+                      <ul class="input-list">
+                        <li>
+                          <span class="tit essential">평균기온</span>
+                          <div class="input-wrap w-del" style="width: 156px;">
+                            <input type="text" class="input-base" value="Enabled">
+                            <button class="btn-del">삭제</button>
+                          </div>
+                          <span class="unit">℃</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <span class="label">조도</span>
+                  <div class="input-flex">
+                    <div class="input-wrap">
+                      <ul class="input-list">
+                        <li>
+                          <span class="tit essential">주야</span>
+                          <div class="select-wrap">
+                            <span class="select-base" style="width: 180px;">
+                              <span class="value"></span>
+                              <select>
+                                <option value="0">선택</option>
+                                <option value="1" selected>주간</option>
+                                <option value="2">Value 2</option>
+                                <option value="3">Value 3</option>
+                              </select>
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit essential">인공조명</span>
+                          <div class="select-wrap">
+                            <span class="select-base" style="width: 180px;">
+                              <span class="value"></span>
+                              <select>
+                                <option value="0">선택</option>
+                                <option value="1" selected>없음</option>
+                                <option value="2">Value 2</option>
+                                <option value="3">Value 3</option>
+                              </select>
+                            </span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <span class="label">날씨</span>
+                  <div class="input-flex" style="padding: 10px 0;">
+                    <div class="input-wrap">
+                      <ul class="input-list">
+                        <li>
+                          <span class="tit essential w-tip">날씨<a href="#" class="btn-tip gray in-tip">팁</a></span>
+                          <div class="tip-area" style="width: 260px; left:42px; top:25px;">
+                            <p class="s-tit">날씨 정보안내</p>
+                            <a href="#" class="btn-close"></a>
+                            <p class="txt gray">날씨 정보에 따라서 부가정보가 변경됩니다.</p>
+                            <ul class="s-list">
+                              <li>
+                                <dl>
+                                  <dt>1. 맑음 선택 시 부가정보 변경</dt>
+                                  <dd>
+                                    <ul>
+                                      <li>- 구름의 양 : 맑음 </li>
+                                      <li>- 강수 : 강도0 (3mm/hr 미만)</li>
+                                      <li>- 강설 : 강도0 (1mm/hr 미만)</li>
+                                    </ul>
+                                  </dd>
+                                </dl>
+                              </li>
+                              <li>
+                                <dl>
+                                  <dt>2. 흐림 선택 시 부가정보 변경</dt>
+                                  <dd>
+                                    <ul>
+                                      <li>- 구름의 양 : 약간흐림</li>
+                                    </ul>
+                                  </dd>
+                                </dl>
+                              </li>
+                              <li>
+                                <dl>
+                                  <dt>3. 비 선택 시 부가정보 변경</dt>
+                                  <dd>
+                                    <ul>
+                                      <li>- 구름의 양 : 흐림</li>
+                                      <li>- 강수 : 강도1 (3~15mm/hr)</li>
+                                    </ul>
+                                  </dd>
+                                </dl>
+                              </li>
+                              <li>
+                                <dl>
+                                  <dt>4. 눈 선택 시 부가정보 변경</dt>
+                                  <dd>
+                                    <ul>
+                                      <li>- 구름의 양 : 흐림</li>
+                                      <li>- 강수 : 강도1 (1~3mm/hr)</li>
+                                    </ul>
+                                  </dd>
+                                </dl>
+                              </li>
+                            </ul>
+                          </div>
+                          <ul class="radio-list">
+                            <li>
+                              <span class="radio-base">
+                                <input type="radio" id="radio-weather-1" name="radio-weather" checked>
+                                <label for="radio-weather-1">맑음</label>
+                              </span>
+                            </li>
+                            <li>
+                              <span class="radio-base">
+                                <input type="radio" id="radio-weather-2" name="radio-weather">
+                                <label for="radio-weather-2">흐림</label>
+                              </span>
+                            </li>
+                            <li>
+                              <span class="radio-base">
+                                <input type="radio" id="radio-weather-3" name="radio-weather">
+                                <label for="radio-weather-3">비</label>
+                              </span>
+                            </li>
+                            <li>
+                              <span class="radio-base">
+                                <input type="radio" id="radio-weather-4" name="radio-weather">
+                                <label for="radio-weather-4">눈</label>
+                              </span>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <span class="label">부가정보</span>
+                  <div class="input-flex">
+                    <div class="input-wrap">
+                      <ul class="input-list">
+                        <li>
+                          <span class="tit">강수</span>
+                          <div class="select-wrap">
+                            <span class="select-base disabled" style="width: 180px;">
+                              <span class="value"></span>
+                              <select>
+                                <option value="0">선택</option>
+                                <option value="1" selected>강도2 (15mm/hr이상)</option>
+                                <option value="2">Value 2</option>
+                                <option value="3">Value 3</option>
+                              </select>
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">강설</span>
+                          <div class="select-wrap">
+                            <span class="select-base disabled" style="width: 180px;">
+                              <span class="value"></span>
+                              <select>
+                                <option value="0">선택</option>
+                                <option value="1" selected>강도0</option>
+                                <option value="2">Value 2</option>
+                                <option value="3">Value 3</option>
+                              </select>
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">풍속</span>
+                          <div class="select-wrap">
+                            <span class="select-base" style="width: 200px;">
+                              <span class="value"></span>
+                              <select>
+                                <option value="0" selected>선택</option>
+                                <option value="1">Value 1</option>
+                                <option value="2">Value 2</option>
+                                <option value="3">Value 3</option>
+                              </select>
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">진행방향</span>
+                          <div class="select-wrap">
+                            <span class="select-base" style="width: 100px;">
+                              <span class="value"></span>
+                              <select>
+                                <option value="0" selected>선택</option>
+                                <option value="1">Value 1</option>
+                                <option value="2">Value 2</option>
+                                <option value="3">Value 3</option>
+                              </select>
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">미립자</span>
+                          <div class="select-wrap">
+                            <span class="select-base" style="width: 120px;">
+                              <span class="value"></span>
+                              <select>
+                                <option value="0" selected>선택</option>
+                                <option value="1">Value 1</option>
+                                <option value="2">Value 2</option>
+                                <option value="3">Value 3</option>
+                              </select>
+                            </span>
+                            <span class="select-base" style="width: 180px;">
+                              <span class="value"></span>
+                              <select>
+                                <option value="0" selected>선택</option>
+                                <option value="1">Value 1</option>
+                                <option value="2">Value 2</option>
+                                <option value="3">Value 3</option>
+                              </select>
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">구름의 양</span>
+                          <div class="select-wrap">
+                            <span class="select-base disabled" style="width: 126px;">
+                              <span class="value"></span>
+                              <select>
+                                <option value="0">선택</option>
+                                <option value="1" selected>약간흐림</option>
+                                <option value="2">Value 2</option>
+                                <option value="3">Value 3</option>
+                              </select>
+                            </span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+              <!-- 고정식 영상 -->
+              <ul class="form-list form-list-tp2" style="display: none;">
+                <li>
+                  <span class="label">기온</span>
+                  <div class="input-flex">
+                    <div class="input-wrap">
+                      <ul class="input-list">
+                        <li>
+                          <span class="tit essential">최저기온</span>
+                          <div class="input-wrap w-del" style="width: 156px;">
+                            <input type="text" class="input-base" value="Enabled">
+                            <button class="btn-del">삭제</button>
+                          </div>
+                          <span class="unit">℃</span>
+                        </li>
+                        <li style="margin-left:4px;">
+                          <span class="tit essential">최고기온</span>
+                          <div class="input-wrap w-del" style="width: 156px;">
+                            <input type="text" class="input-base" value="Enabled">
+                            <button class="btn-del">삭제</button>
+                          </div>
+                          <span class="unit">℃</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <span class="label">조도</span>
+                  <div class="input-flex">
+                    <div class="input-wrap">
+                      <ul class="input-list">
+                        <li>
+                          <span class="tit essential">주야</span>
+                          <div class="select-wrap">
+                            <span class="select-base" style="width: 180px;">
+                              <span class="value"></span>
+                              <select>
+                                <option value="0">선택</option>
+                                <option value="1" selected>주간</option>
+                                <option value="2">Value 2</option>
+                                <option value="3">Value 3</option>
+                              </select>
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit essential">인공조명</span>
+                          <div class="select-wrap">
+                            <span class="select-base" style="width: 180px;">
+                              <span class="value"></span>
+                              <select>
+                                <option value="0">선택</option>
+                                <option value="1" selected>없음</option>
+                                <option value="2">Value 2</option>
+                                <option value="3">Value 3</option>
+                              </select>
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">구름의 양</span>
+                          <div class="select-wrap">
+                            <span class="select-base" style="width: 126px;">
+                              <span class="value"></span>
+                              <select>
+                                <option value="0">선택</option>
+                                <option value="1" selected>약간흐림</option>
+                                <option value="2">Value 2</option>
+                                <option value="3">Value 3</option>
+                              </select>
+                            </span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <span class="label">날씨</span>
+                  <div class="input-flex">
+                    <div class="input-wrap">
+                      <ul class="input-list">
+                        <li>
+                          <span class="tit">강수</span>
+                          <div class="select-wrap">
+                            <span class="select-base" style="width: 180px;">
+                              <span class="value"></span>
+                              <select>
+                                <option value="0">선택</option>
+                                <option value="1" selected>강도2 (15mm/hr이상)</option>
+                                <option value="2">Value 2</option>
+                                <option value="3">Value 3</option>
+                              </select>
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">강설</span>
+                          <div class="select-wrap">
+                            <span class="select-base" style="width: 180px;">
+                              <span class="value"></span>
+                              <select>
+                                <option value="0">선택</option>
+                                <option value="1" selected>강도0</option>
+                                <option value="2">Value 2</option>
+                                <option value="3">Value 3</option>
+                              </select>
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">풍속</span>
+                          <div class="select-wrap">
+                            <span class="select-base" style="width: 200px;">
+                              <span class="value"></span>
+                              <select>
+                                <option value="0">선택</option>
+                                <option value="1" selected>약한 강한 바람</option>
+                                <option value="2">Value 2</option>
+                                <option value="3">Value 3</option>
+                              </select>
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">진행방향</span>
+                          <div class="select-wrap">
+                            <span class="select-base" style="width: 100px;">
+                              <span class="value"></span>
+                              <select>
+                                <option value="0">선택</option>
+                                <option value="1" selected>역풍</option>
+                                <option value="2">Value 2</option>
+                                <option value="3">Value 3</option>
+                              </select>
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">미립자</span>
+                          <div class="select-wrap">
+                            <span class="select-base" style="width: 120px;">
+                              <span class="value"></span>
+                              <select>
+                                <option value="0">선택</option>
+                                <option value="1" selected>안개</option>
+                                <option value="2">Value 2</option>
+                                <option value="3">Value 3</option>
+                              </select>
+                            </span>
+                            <span class="select-base" style="width: 180px;">
+                              <span class="value"></span>
+                              <select>
+                                <option value="0">선택</option>
+                                <option value="1" selected>강도 0</option>
+                                <option value="2">Value 2</option>
+                                <option value="3">Value 3</option>
+                              </select>
+                            </span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!--
+          <li>
+            <div class="tit-wrp">
+              <p class="tit">영상 ODD태그 등록</p>
+            </div>
+            <div class="regist-form" id="regist-odd-tag">
+              <div class="input-wrap">
+                <span class="btn-base tp1 md btn-popup-anim-1"><a href="#popup-regist-odd-tag">등록</a></span>
+                <span class="info">영상 ODD 태그를 등록하여 주세요.</span>
+              </div>
+
+              <div class="input-wrap" style="display: none;">
+                <span class="btn-base tp1 md"><a href="#">수정</a></span>
+                <span class="info">등록 영상 ODD 태그 <em>000</em>개</span>
+              </div>
+            </div>
+          </li>
+          -->
+          <li>
+            <div class="tit-wrp">
+              <p class="tit essential">태그 등록</p>
+              <span class="info">최대 <em>5개, 10글자</em>까지 등록할 수 있습니다.</span>
+            </div>
+            <div class="regist-form">
+              <div class="regist-tag-area">
+                <div class="input-wrap w-del regist-tag">
+                  <input type="text" class="input-base" placeholder="태그 정보를 등록합니다.">
+                  <button class="btn-del">삭제</button>
+                  <span class="btn-base tp1 md"><a href="#">등록</a></span>
+                </div>
+                <ul class="file-list"></ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="tit-wrp">
+              <p class="tit essential">파일 업로드</p>
+              <span class="info">첨부 파일은 <em>500MB</em>까지 등록 가능합니다.</span>
+            </div>
+            <div class="regist-form">
+              <div class="file-upload-area">
+                <span class="btn-base tp1 md btn-file"><a href="#">파일선택</a><input type="file" value="파일선택"></span>
+                <span class="info">이동식 영상 파일 <em>1개</em>, GPS파일(TXT) <em>1개</em>까지 등록 가능합니다.</span>
+                <ul class="file-list"></ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="btns-wrap t-center mt32">
+          <span class="btn-base tp2 lg"><a href="#">저장</a></span>
+        </div>
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+
+    <div class="popup-wrap z-anim mfp-hide" id="popup-weather-api" data-width="392">
+      <div class="con-wrap">
+        <div class="tit-area">
+          <h3 class="tit">기상정보 API</h3>
+          <span class="info">수집일시, 지역정보 기준으로 API정보를 호출합니다.</span>
+        </div>
+        <div class="info-box">
+          <ul>
+            <li>
+              <span class="label">수집일시</span>
+              <div class="result-area">
+                <p class="val">2023.07.23  14:00 ~ 14:30</p>
+              </div>
+            </li>
+            <li>
+              <span class="label">지역선택</span>
+              <div class="result-area">
+                <span class="select-base">
+                  <span class="value"></span>
+                  <select>
+                    <option value="0">선택</option>
+                    <option value="1" selected>서울</option>
+                    <option value="2">Value 2</option>
+                    <option value="3">Value 3</option>
+                  </select>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div><!-- .info-box -->
+        <div class="input-wrap tit-btns mt16">
+          <span class="tit">API 제공목록</span>
+          <div class="btns-wrap">
+            <span class="btn-base tp1 sm"><a href="#">API호출</a></span>
+            <a href="#" class="btn-refresh">새로고침</a>
+          </div>
+        </div>
+
+        <div class="tb-wrap td-normal mt8" id="mock_api_check">
+          <div class="tb-head">
+            <table summary="API 제공목록" class="tb-list">
+              <colgroup>
+                <col width="50" />
+                <col width="80" />
+                <col width="60" />
+                <col width="*" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="chk-base chk-only chk-type-2">
+                      <input type="checkbox" id="chk-all" />
+                      <label for="chk-all">전체 체크</label>
+                    </span>
+                  </th>
+                  <th scope="col">구분</th>
+                  <th scope="col" colspan="2">속성</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tb-body">
+            <table summary="API 제공목록" class="tb-list">
+              <colgroup>
+                <col width="50" />
+                <col width="80" />
+                <col width="60" />
+                <col width="*" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td>
+                    <span class="chk-base chk-only">
+                      <input type="checkbox" id="chk-1" />
+                      <label for="chk-1">체크1</label>
+                    </span>
+                  </td>
+                  <td rowspan="2">기온</td>
+                  <td colspan="2">최저 온도(℃)</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="chk-base chk-only">
+                      <input type="checkbox" id="chk-2" />
+                      <label for="chk-2">체크2</label>
+                    </span>
+                  </td>
+                  <td colspan="2">최고 온도(℃)</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="chk-base chk-only">
+                      <input type="checkbox" id="chk-3" />
+                      <label for="chk-3">체크3</label>
+                    </span>
+                  </td>
+                  <td>기온</td>
+                  <td colspan="2">구름의 양</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="chk-base chk-only">
+                      <input type="checkbox" id="chk-4" />
+                      <label for="chk-4">체크4</label>
+                    </span>
+                  </td>
+                  <td rowspan="4">날씨</td>
+                  <td colspan="2">강수</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="chk-base chk-only">
+                      <input type="checkbox" id="chk-5" />
+                      <label for="chk-5">체크5</label>
+                    </span>
+                  </td>
+                  <td colspan="2">강설</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="chk-base chk-only">
+                      <input type="checkbox" id="chk-6" />
+                      <label for="chk-6">체크6</label>
+                    </span>
+                  </td>
+                  <td>풍량</td>
+                  <td>풍속</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="chk-base chk-only">
+                      <input type="checkbox" id="chk-7" />
+                      <label for="chk-7">체크7</label>
+                    </span>
+                  </td>
+                  <td colspan="2">미립자 강도</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div><!-- .tb-wrap -->
+
+        <div class="tb-wrap td-normal mt8" id="mock_api_result" style="display: none;">
+          <div class="tb-head">
+            <table summary="API 제공목록" class="tb-list">
+              <colgroup>
+                <col width="55" />
+                <col width="50" />
+                <col width="70" />
+                <col width="*" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">구분</th>
+                  <th scope="col" colspan="2">속성</th>
+                  <th scope="col">API 호출</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tb-body">
+            <table summary="API 제공목록" class="tb-list">
+              <colgroup>
+                <col width="55" />
+                <col width="50" />
+                <col width="70" />
+                <col width="*" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td rowspan="2">기온</td>
+                  <td colspan="2">최저 온도(℃)</td>
+                  <td><span class="result">25.5 ℃</span></td>
+                </tr>
+                <tr>
+                  <td class="bl" colspan="2">최고 온도(℃)</td>
+                  <td><span class="result">34.5 ℃</span></td>
+                </tr>
+                <tr>
+                  <td>기온</td>
+                  <td colspan="2">구름의 양</td>
+                  <td><span class="result">흐림 8.5 이상</span></td>
+                </tr>
+                <tr>
+                  <td rowspan="4">날씨</td>
+                  <td colspan="2">강수</td>
+                  <td><span class="result">강도13~15mm/hr</span></td>
+                </tr>
+                <tr>
+                  <td class="bl" colspan="2">강설</td>
+                  <td><span class="result">강도01mm/hr 미만</span></td>
+                </tr>
+                <tr>
+                  <td class="bl">풍량</td>
+                  <td>풍속</td>
+                  <td><span class="result">약한 강한 바람 4~9m/s 미만</span></td>
+                </tr>
+                <tr>
+                  <td class="bl" colspan="2">미립자 강도</td>
+                  <td><span class="result no-data">정보없음</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div><!-- .tb-wrap -->
+
+        <div class="tb-info t-right">
+          <span class="tiny">*정보출처 : 기상청 API 허브</span>
+        </div>
+        <div class="btns-wrap t-center mt16">
+          <span class="btn-base tp2 md"><a href="#">저장</a></span>
+        </div>
+      </div>
+    </div><!-- .popup-wrap -->
+
+    <div class="popup-wrap z-anim mfp-hide" id="popup-fixed-video-info" data-width="680">
+      <div class="con-wrap">
+        <div class="tit-area">
+          <h3 class="tit">고정식 영상 위치 정보</h3>
+          <span class="info">전처리한 구간 위치정보가 없는 경우 매개변수가 추출 되지 않습니다. <br />영상정보 저장 선택 시 영상정보만 저장이 됩니다.</span>
+        </div>
+        <div class="info-box">
+          <ul>
+            <li>
+              <span class="label">유형</span>
+              <div class="result-area">
+                <span class="select-base" style="width: 220px">
+                  <span class="value"></span>
+                  <select>
+                    <option value="0">선택</option>
+                    <option value="1" selected>고속도로</option>
+                    <option value="2">Value 2</option>
+                    <option value="3">Value 3</option>
+                  </select>
+                </span>
+              </div>
+            </li>
+            <li>
+              <span class="label">대상구간</span>
+              <div class="result-area">
+                <div class="select-wrap flex">
+                  <span class="select-base" style="width: 220px">
+                    <span class="value"></span>
+                    <select>
+                      <option value="0">선택</option>
+                      <option value="1" selected>경부고속도로</option>
+                      <option value="2">Value 2</option>
+                      <option value="3">Value 3</option>
+                    </select>
+                  </span>
+                  <span class="select-base" style="width: 278px">
+                    <span class="value"></span>
+                    <select>
+                      <option value="0" selected>선택</option>
+                      <option value="1">경부고속도로</option>
+                      <option value="2">Value 2</option>
+                      <option value="3">Value 3</option>
+                    </select>
+                  </span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div><!-- .info-box -->
+        <div class="btns-wrap t-center mt16">
+          <span class="btn-base tp2 md"><a href="#">저장</a></span>
+          <span class="btn-base tp2 md"><a href="#">영상정보 저장</a></span>
+        </div>
+      </div>
+    </div><!-- .popup-wrap -->
+
+    <div class="popup-wrap z-anim mfp-hide" id="popup-enviroment-info" data-width="684">
+      <div class="con-wrap">
+        <div class="tit-area">
+          <h3 class="tit">환경요소 정보안내</h3>
+        </div>
+        <div class="tb-wrap td-short">
+          <div class="tb-head">
+            <table summary="환경요소 정보안내" class="tb-list">
+              <colgroup>
+                <col width="55" />
+                <col width="55" />
+                <col width="145" />
+                <col width="140" />
+                <col width="169" />
+                <col width="*" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">구분</th>
+                  <th scope="col" colspan="2">속성</th>
+                  <th scope="col" colspan="2">세부속성</th>
+                  <th scope="col">API제공</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tb-body">
+            <table summary="환경요소 정보안내" class="tb-list">
+              <colgroup>
+                <col width="55" />
+                <col width="55" />
+                <col width="145" />
+                <col width="140" />
+                <col width="169" />
+                <col width="*" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td>기온</td>
+                  <td colspan="4">최저 온도(℃)</td>
+                  <td>
+                    <span class="ico"><img src="img/icon/ic_yes.svg" alt="O" /></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>기온</td>
+                  <td colspan="4">최고 온도(℃)</td>
+                  <td>
+                    <span class="ico"><img src="img/icon/ic_yes.svg" alt="O" /></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td rowspan="6">조도</td>
+                  <td colspan="2" rowspan="2">주야구분</td>
+                  <td>주간</td>
+                  <td>06:00 ~ 18:00</td>
+                  <td><span class="ico"><img src="img/icon/ic_no.svg" alt="-" /></span></td>
+                </tr>
+                <tr>
+                  <td class="bl">야간</td>
+                  <td>18:00 ~ 06:00</td>
+                  <td><span class="ico"><img src="img/icon/ic_no.svg" alt="-" /></span></td>
+                </tr>
+                <tr>
+                  <td class="bl" colspan="2">인공조명 유무</td>
+                  <td>인공조명</td>
+                  <td><span class="ico"><img src="img/icon/ic_no.svg" alt="-" /></span></td>
+                  <td><span class="ico"><img src="img/icon/ic_no.svg" alt="-" /></span></td>
+                </tr>
+                <tr>
+                  <td class="bl" colspan="2" rowspan="3">구름의 양</td>
+                  <td>맑음</td>
+                  <td>전운량 ~ 2.4</td>
+                  <td><span class="ico"><img src="img/icon/ic_yes.svg" alt="O" /></span></td>
+                </tr>
+                <tr>
+                  <td class="bl">약간흐림</td>
+                  <td>전운량 2.5~ 8.4</td>
+                  <td><span class="ico"><img src="img/icon/ic_yes.svg" alt="O" /></span></td>
+                </tr>
+                <tr>
+                  <td class="bl">흐림</td>
+                  <td>전운량 8.5 이상</td>
+                  <td><span class="ico"><img src="img/icon/ic_yes.svg" alt="O" /></span></td>
+                </tr>
+                <tr>
+                  <td rowspan="16">날씨</td>
+                  <td rowspan="3" colspan="2">강수</td>
+                  <td>강도0</td>
+                  <td>3mm/hr 미만</td>
+                  <td><span class="ico"><img src="img/icon/ic_yes.svg" alt="O" /></span></td>
+                </tr>
+                <tr>
+                  <td class="bl">강도1</td>
+                  <td>3~15mm/hr</td>
+                  <td><span class="ico"><img src="img/icon/ic_yes.svg" alt="O" /></span></td>
+                </tr>
+                <tr>
+                  <td class="bl">강도2</td>
+                  <td>15mm/hr이상</td>
+                  <td><span class="ico"><img src="img/icon/ic_yes.svg" alt="O" /></span></td>
+                </tr>
+                <tr>
+                  <td class="bl" rowspan="3" colspan="2">강설</td>
+                  <td>강도0</td>
+                  <td>1mm/hr 미만</td>
+                  <td><span class="ico"><img src="img/icon/ic_yes.svg" alt="O" /></span></td>
+                </tr>
+                <tr>
+                  <td class="bl">강도1</td>
+                  <td>1~3mm/hr</td>
+                  <td><span class="ico"><img src="img/icon/ic_yes.svg" alt="O" /></span></td>
+                </tr>
+                <tr>
+                  <td class="bl">강도2</td>
+                  <td>3mm/hr이상</td>
+                  <td><span class="ico"><img src="img/icon/ic_yes.svg" alt="O" /></span></td>
+                </tr>
+                <tr>
+                  <td class="bl" rowspan="7">풍량</td>
+                  <td rowspan="4">풍속</td>
+                  <td>약한 바람</td>
+                  <td>1mm/hr 미만</td>
+                  <td><span class="ico"><img src="img/icon/ic_yes.svg" alt="O" /></span></td>
+                </tr>
+                <tr>
+                  <td class="bl">약한 강한 바람</td>
+                  <td>1~3mm/hr</td>
+                  <td><span class="ico"><img src="img/icon/ic_yes.svg" alt="O" /></span></td>
+                </tr>
+                <tr>
+                  <td class="bl">강한 바람</td>
+                  <td>3mm/hr이상</td>
+                  <td><span class="ico"><img src="img/icon/ic_yes.svg" alt="O" /></span></td>
+                </tr>
+                <tr>
+                  <td class="bl">매우 강한 바람</td>
+                  <td>3mm/hr이상</td>
+                  <td><span class="ico"><img src="img/icon/ic_yes.svg" alt="O" /></span></td>
+                </tr>
+                <tr>
+                  <td class="bl" rowspan="3">진행 방향</td>
+                  <td>역풍</td>
+                  <td><span class="ico"><img src="img/icon/ic_no.svg" alt="-" /></span></td>
+                  <td><span class="ico"><img src="img/icon/ic_no.svg" alt="-" /></span></td>
+                </tr>
+                <tr>
+                  <td class="bl">순풍</td>
+                  <td><span class="ico"><img src="img/icon/ic_no.svg" alt="-" /></span></td>
+                  <td><span class="ico"><img src="img/icon/ic_no.svg" alt="-" /></span></td>
+                </tr>
+                <tr>
+                  <td class="bl">횡풍</td>
+                  <td><span class="ico"><img src="img/icon/ic_no.svg" alt="-" /></span></td>
+                  <td><span class="ico"><img src="img/icon/ic_no.svg" alt="-" /></span></td>
+                </tr>
+                <tr>
+                  <td class="bl" rowspan="3" colspan="2">미립자 (안개, 황사, 미세먼지)</td>
+                  <td>강도0</td>
+                  <td>시정 1~0.5km</td>
+                  <td><span class="ico"><img src="img/icon/ic_yes.svg" alt="O" /></span></td>
+                </tr>
+                <tr>
+                  <td class="bl">강도1</td>
+                  <td>시정 0.5~0.2km</td>
+                  <td><span class="ico"><img src="img/icon/ic_yes.svg" alt="O" /></span></td>
+                </tr>
+                <tr>
+                  <td class="bl">강도2</td>
+                  <td>시정 0.2km 미만</td>
+                  <td><span class="ico"><img src="img/icon/ic_yes.svg" alt="O" /></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div><!-- .tb-wrap -->
+      </div>
+    </div><!-- .popup-wrap -->
+
+    <div class="popup-wrap z-anim mfp-hide" id="popup-notice" data-width="300">
+      <div class="con-wrap">
+        <p class="msg">저장에 실패 하였습니다. 다시 시도해 주십시오.</p>
+        <div class="btns-wrap t-center mt16">
+          <span class="btn-base tp1 md b-mfp-close"><a href="#">닫기</a></span>
+        </div>
+      </div>
+    </div><!-- .popup-wrap -->
+
+    <div class="popup-wrap z-anim mfp-hide" id="popup-regist-odd-tag" data-width="814">
+      <div class="con-wrap">
+        <div class="tit-area">
+          <h3 class="tit">영상 ODD 태그 정보</h3>
+          <span class="info">영상에 등록하고자 하는 ODD 태그 정보를 선택하고 저장하세요.</span>
+        </div>
+        <div class="odd-tag-form">
+          <div class="odd-tag-list">
+            <div class="input-wrap tit-btns">
+              <span class="tit">ODD 항목</span>
+              <div class="btns-wrap">
+                <span class="btn-base tp1 sm"><a href="#">선택완료</a></span>
+              </div>
+            </div>
+            <div class="input-wrap w-del w-search mt8">
+              <input type="text" class="input-base" placeholder="ODD 항목을 검색하세요.">
+              <button class="btn-del">삭제</button>
+              <button class="btn-search">검색</button>
+            </div>
+            <div class="tree-frame swith mt8">
+              <div class="tree-wrap">
+                <dl>
+                  <dt>장면요소</dt>
+                  <dd>
+                    <ul class="tree-list">
+                      <li>
+                        <div class="inner">
+                          <a href="#" class="btn-toggle"></a>
+                          <ul class="chk-wrap">
+                            <li>
+                              <span class="chk-base">
+                                <input type="checkbox" id="chk-a-1" />
+                                <label for="chk-a-1">구역</label>
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                        <ul class="tree-list">
+                          <li class="on">
+                            <div class="inner">
+                              <a href="#" class="btn-toggle"></a>
+                              <ul class="chk-wrap">
+                                <li>
+                                  <span class="chk-base">
+                                    <input type="checkbox" id="chk-a-1-1" />
+                                    <label for="chk-a-1-1">가상경계 구역</label>
+                                  </span>
+                                </li>
+                              </ul>
+                            </div>
+                            <ul class="tree-list">
+                              <li>
+                                <div class="inner">
+                                  <ul class="chk-wrap">
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-1-1-1" />
+                                        <label for="chk-a-1-1-1">고정노선</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-1-1-2" />
+                                        <label for="chk-a-1-1-2">사전정의된 가상경계 구역</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-1-1-3" />
+                                        <label for="chk-a-1-1-3">기타</label>
+                                      </span>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="on">
+                            <div class="inner">
+                              <a href="#" class="btn-toggle"></a>
+                              <ul class="chk-wrap">
+                                <li>
+                                  <span class="chk-base">
+                                    <input type="checkbox" id="chk-a-1-2" />
+                                    <label for="chk-a-1-2">행정구역 (지역)</label>
+                                  </span>
+                                </li>
+                              </ul>
+                            </div>
+                            <ul class="tree-list">
+                              <li>
+                                <div class="inner">
+                                  <ul class="chk-wrap">
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-1-2-1" />
+                                        <label for="chk-a-1-2-1">비지정</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-1-2-2" />
+                                        <label for="chk-a-1-2-2">지정</label>
+                                      </span>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="on">
+                            <div class="inner">
+                              <a href="#" class="btn-toggle"></a>
+                              <ul class="chk-wrap">
+                                <li>
+                                  <span class="chk-base">
+                                    <input type="checkbox" id="chk-a-1-3" />
+                                    <label for="chk-a-1-3">교통관리 구역</label>
+                                  </span>
+                                </li>
+                              </ul>
+                            </div>
+                            <ul class="tree-list">
+                              <li>
+                                <div class="inner">
+                                  <ul class="chk-wrap">
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-1-3-1" />
+                                        <label for="chk-a-1-3-1">가변속도제한 구역</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-1-3-2" />
+                                        <label for="chk-a-1-3-2">동적 교통표지 구역</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-1-3-3" />
+                                        <label for="chk-a-1-3-3">임시차로 운행구역</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-1-3-4" />
+                                        <label for="chk-a-1-3-4">임시차선 폐쇄 구역</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-1-3-5" />
+                                        <label for="chk-a-1-3-5">경찰 수신호 구역</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-1-3-6" />
+                                        <label for="chk-a-1-3-6">기타</label>
+                                      </span>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="on">
+                            <div class="inner">
+                              <a href="#" class="btn-toggle"></a>
+                              <ul class="chk-wrap">
+                                <li>
+                                  <span class="chk-base">
+                                    <input type="checkbox" id="chk-a-1-4" />
+                                    <label for="chk-a-1-4">지정보호 구역</label>
+                                  </span>
+                                </li>
+                              </ul>
+                            </div>
+                            <ul class="tree-list">
+                              <li>
+                                <div class="inner">
+                                  <ul class="chk-wrap">
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-1-4-1" />
+                                        <label for="chk-a-1-4-1">어린이 보호구역</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-1-4-2" />
+                                        <label for="chk-a-1-4-2">노인 및 장애인 보호구역</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-1-4-3" />
+                                        <label for="chk-a-1-4-3">기타</label>
+                                      </span>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="on">
+                            <div class="inner">
+                              <a href="#" class="btn-toggle"></a>
+                              <ul class="chk-wrap">
+                                <li>
+                                  <span class="chk-base">
+                                    <input type="checkbox" id="chk-a-1-5" />
+                                    <label for="chk-a-1-5">간섭구역</label>
+                                  </span>
+                                </li>
+                              </ul>
+                            </div>
+                            <ul class="tree-list">
+                              <li>
+                                <div class="inner">
+                                  <ul class="chk-wrap">
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-1-5-1" />
+                                        <label for="chk-a-1-5-1">터널</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-1-5-2" />
+                                        <label for="chk-a-1-5-2">주차장</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-1-5-3" />
+                                        <label for="chk-a-1-5-3">통신음영구간</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-1-5-4" />
+                                        <label for="chk-a-1-5-4">기타</label>
+                                      </span>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="on">
+                        <div class="inner">
+                          <a href="#" class="btn-toggle"></a>
+                          <ul class="chk-wrap">
+                            <li>
+                              <span class="chk-base">
+                                <input type="checkbox" id="chk-a-2" />
+                                <label for="chk-a-2">주행가능 영역</label>
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                        <ul class="tree-list">
+                          <li>
+                            <div class="inner">
+                              <a href="#" class="btn-toggle"></a>
+                              <ul class="chk-wrap">
+                                <li>
+                                  <span class="chk-base">
+                                    <input type="checkbox" id="chk-a-2-1" />
+                                    <label for="chk-a-2-1">주행주행가능 도로유형</label>
+                                  </span>
+                                </li>
+                              </ul>
+                            </div>
+                            <ul class="tree-list">
+                              <li>
+                                <div class="inner">
+                                  <ul class="chk-wrap">
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-2-1-1" />
+                                        <label for="chk-a-2-1-1">자동차 전용도로</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-2-1-2" />
+                                        <label for="chk-a-2-1-2">일반국도</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-2-3-1-3" />
+                                        <label for="chk-a-2-1-3">특별시도·광역시도</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-2-1-4" />
+                                        <label for="chk-a-2-1-4">국가지원지방도</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-2-1-5" />
+                                        <label for="chk-a-2-1-5">지방도</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-2-1-6" />
+                                        <label for="chk-a-2-1-6">시도</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-2-1-7" />
+                                        <label for="chk-a-2-1-7">군도</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-2-1-8" />
+                                        <label for="chk-a-2-1-8">구도</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-2-1-9" />
+                                        <label for="chk-a-2-1-9">연결로</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-2-1-10" />
+                                        <label for="chk-a-2-1-10">생활도로</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-2-1-11" />
+                                        <label for="chk-a-2-1-11">주차구역</label>
+                                      </span>
+                                    </li>
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-2-1-12" />
+                                        <label for="chk-a-2-1-12">기타</label>
+                                      </span>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <div class="inner">
+                              <a href="#" class="btn-toggle"></a>
+                              <ul class="chk-wrap">
+                                <li>
+                                  <span class="chk-base">
+                                    <input type="checkbox" id="chk-a-2-2" />
+                                    <label for="chk-a-2-2">주행가능 기하구조</label>
+                                  </span>
+                                </li>
+                              </ul>
+                            </div>
+                            <ul class="tree-list">
+                              <li class="on">
+                                <div class="inner">
+                                  <a href="#" class="btn-toggle"></a>
+                                  <ul class="chk-wrap">
+                                    <li>
+                                      <span class="chk-base w-filter">
+                                        <a href="javascript:;" class="btn-filter" onclick="openSPopup('#filter2');"></a>
+                                        <input type="checkbox" id="chk-a-2-2-1" />
+                                        <label for="chk-a-2-2-1">수평면</label>
+                                      </span>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <ul class="tree-list">
+                                  <li>
+                                    <div class="inner">
+                                      <ul class="chk-wrap">
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-2-1-1" />
+                                            <label for="chk-a-2-2-1-1">직선부</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-2-1-2" disabled />
+                                            <label for="chk-a-2-2-1-2">곡선부(곡률반경)</label>
+                                          </span>
+                                          <div class="res-area">
+                                            <span class="res">100m ~ 500m</span>
+                                            <a href="#" class="btn-delete">삭제</a>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <div class="inner">
+                                  <ul class="chk-wrap">
+                                    <li>
+                                      <span class="chk-base w-filter">
+                                        <a href="javascript:;" class="btn-filter" onclick="openSPopup('#filter3');"></a>
+                                        <input type="checkbox" id="chk-a-2-2-2" disabled />
+                                        <label for="chk-a-2-2-2">수직면</label>
+                                      </span>
+                                      <div class="res-area">
+                                        <span class="res">+3% ~ +5%</span>
+                                        <a href="#" class="btn-delete">삭제</a>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <li class="on">
+                                <div class="inner">
+                                  <a href="#" class="btn-toggle"></a>
+                                  <ul class="chk-wrap">
+                                    <li>
+                                      <span class="chk-base w-filter">
+                                        <a href="javascript:;" class="btn-filter" onclick="openSPopup('#filter4');"></a>
+                                        <input type="checkbox" id="chk-a-2-3-1" />
+                                        <label for="chk-a-2-3-1">횡단면</label>
+                                      </span>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <ul class="tree-list">
+                                  <li>
+                                    <div class="inner">
+                                      <ul class="chk-wrap">
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-1-1" disabled />
+                                            <label for="chk-a-2-3-1-1">차로수</label>
+                                          </span>
+                                          <div class="res-area">
+                                            <span class="res">1차로~ 7차로</span>
+                                            <a href="#" class="btn-delete">삭제</a>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-1-2" />
+                                            <label for="chk-a-2-3-1-2">차로폭</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-1-3" disabled />
+                                            <label for="chk-a-2-3-1-3">횡단경사</label>
+                                          </span>
+                                          <div class="res-area">
+                                            <span class="res">0m ~ 5m</span>
+                                            <a href="#" class="btn-delete">삭제</a>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-1-4"  disabled/>
+                                            <label for="chk-a-2-3-1-4">최대편경사</label>
+                                          </span>
+                                          <div class="res-area">
+                                            <span class="res">5% ~ 6%</span>
+                                            <a href="#" class="btn-delete">삭제</a>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-1-5" />
+                                            <label for="chk-a-2-3-1-5">측방여유폭</label>
+                                          </span>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="on">
+                            <div class="inner">
+                              <a href="#" class="btn-toggle"></a>
+                              <ul class="chk-wrap">
+                                <li>
+                                  <span class="chk-base">
+                                    <input type="checkbox" id="chk-a-2-3" />
+                                    <label for="chk-a-2-3">주행가능차로 노면표시 및 차선 속성</label>
+                                  </span>
+                                </li>
+                              </ul>
+                            </div>
+                            <ul class="tree-list">
+                              <li class="on">
+                                <div class="inner">
+                                  <a href="#" class="btn-toggle"></a>
+                                  <ul class="chk-wrap">
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-2-3-1" />
+                                        <label for="chk-a-2-3-1">시인성</label>
+                                      </span>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <ul class="tree-list">
+                                  <li class="on">
+                                    <div class="inner">
+                                      <ul class="chk-wrap">
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-1-1" />
+                                            <label for="chk-a-2-3-1-1">뚜렷한</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-1-1" />
+                                            <label for="chk-a-2-3-1-1">흐릿한</label>
+                                          </span>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="on">
+                                <div class="inner">
+                                  <a href="#" class="btn-toggle"></a>
+                                  <ul class="chk-wrap">
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-2-3-2" />
+                                        <label for="chk-a-2-3-2">차선표시 유형</label>
+                                      </span>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <ul class="tree-list">
+                                  <li class="on">
+                                    <div class="inner">
+                                      <ul class="chk-wrap">
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-2-1" />
+                                            <label for="chk-a-2-3-2-1">실선</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-2-2" />
+                                            <label for="chk-a-2-3-2-2">점선</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-2-3" />
+                                            <label for="chk-a-2-3-2-3">좌점혼선</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-2-4" />
+                                            <label for="chk-a-2-3-2-4">우점혼선</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-2-5" />
+                                            <label for="chk-a-2-3-2-5">황색</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-2-6" />
+                                            <label for="chk-a-2-3-2-6">백색</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-2-7" />
+                                            <label for="chk-a-2-3-2-7">청색</label>
+                                          </span>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="on">
+                                <div class="inner">
+                                  <ul class="chk-wrap">
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-2-3-3" />
+                                        <label for="chk-a-2-3-3">임시차선표시</label>
+                                      </span>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <li class="on">
+                                <div class="inner">
+                                  <a href="#" class="btn-toggle"></a>
+                                  <ul class="chk-wrap">
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-2-3-4" />
+                                        <label for="chk-a-2-3-4">노면표시 유형</label>
+                                      </span>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <ul class="tree-list">
+                                  <li class="on">
+                                    <div class="inner">
+                                      <ul class="chk-wrap">
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-4-1" />
+                                            <label for="chk-a-2-3-4-1">정차금지대</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-4-2" />
+                                            <label for="chk-a-2-3-4-2">횡단보도</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-4-3" />
+                                            <label for="chk-a-2-3-4-3">고원식횡단보도</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-4-4" />
+                                            <label for="chk-a-2-3-4-4">자전거횡단보도</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-4-5" />
+                                            <label for="chk-a-2-3-4-5">직진</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-4-6" />
+                                            <label for="chk-a-2-3-4-6">좌회전</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-4-7" />
+                                            <label for="chk-a-2-3-4-7">우회전</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-4-8" />
+                                            <label for="chk-a-2-3-4-8">좌우회전</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-4-9" />
+                                            <label for="chk-a-2-3-4-9">전방향</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-4-10" />
+                                            <label for="chk-a-2-3-4-10">직진 및 좌회전</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-4-11" />
+                                            <label for="chk-a-2-3-4-11">직진 및 우회전</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-4-12" />
+                                            <label for="chk-a-2-3-4-12">직진 및 유턴</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-4-13" />
+                                            <label for="chk-a-2-3-4-13">유턴구역선</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-4-14" />
+                                            <label for="chk-a-2-3-4-14">좌회전 및 유턴</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-4-15" />
+                                            <label for="chk-a-2-3-4-15">차로변경(좌로합류)</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-4-16" />
+                                            <label for="chk-a-2-3-4-16">차로변경(우로합류)</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-4-17" />
+                                            <label for="chk-a-2-3-4-17">오르막경사면</label>
+                                          </span>
+                                        </li>
+                                        <li>
+                                          <span class="chk-base">
+                                            <input type="checkbox" id="chk-a-2-3-4-18" />
+                                            <label for="chk-a-2-3-4-18">기타 지시표시</label>
+                                          </span>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="on">
+                            <div class="inner">
+                              <a href="#" class="btn-toggle"></a>
+                              <ul class="chk-wrap">
+                                <li>
+                                  <span class="chk-base">
+                                    <input type="checkbox" id="chk-a-2-4" />
+                                    <label for="chk-a-2-4">주행가능 차로 속성</label>
+                                  </span>
+                                </li>
+                              </ul>
+                            </div>
+                            <ul class="tree-list">
+                              <li class="on">
+                                <div class="inner">
+                                  <a href="#" class="btn-toggle"></a>
+                                  <ul class="chk-wrap">
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-a-2-4-1" />
+                                        <label for="chk-a-2-4-1">차로유형</label>
+                                      </span>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+              <div class="tree-wrap">
+                <dl>
+                  <dt>환경요소</dt>
+                  <dd>
+                    <ul class="tree-list">
+                      <li class="on">
+                        <div class="inner">
+                          <a href="#" class="btn-toggle"></a>
+                          <ul class="chk-wrap">
+                            <li>
+                              <span class="chk-base">
+                                <input type="checkbox" id="chk-b-1" />
+                                <label for="chk-b-1">기온</label>
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                        <ul class="tree-list">
+                          <li>
+                            <div class="inner">
+                              <ul class="chk-wrap">
+                                <li>
+                                  <span class="chk-base">
+                                    <input type="checkbox" id="chk-b-1-1" />
+                                    <label for="chk-b-1-1">주행가능 최저 온도(℃)</label>
+                                  </span>
+                                </li>
+                                <li>
+                                  <span class="chk-base">
+                                    <input type="checkbox" id="chk-b-1-2" />
+                                    <label for="chk-b-1-2">주행가능 최고 온도(℃)</label>
+                                  </span>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="on">
+                        <div class="inner">
+                          <a href="#" class="btn-toggle"></a>
+                          <ul class="chk-wrap">
+                            <li>
+                              <span class="chk-base">
+                                <input type="checkbox" id="chk-b-2" />
+                                <label for="chk-b-2">조도</label>
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                        <ul class="tree-list">
+                          <li>
+                            <div class="inner">
+                              <a href="#" class="btn-toggle"></a>
+                              <ul class="chk-wrap">
+                                <li>
+                                  <span class="chk-base">
+                                    <input type="checkbox" id="chk-b-2-1" />
+                                    <label for="chk-b-2-1">주야구분</label>
+                                  </span>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="on">
+                            <div class="inner">
+                              <a href="#" class="btn-toggle"></a>
+                              <ul class="chk-wrap">
+                                <li>
+                                  <span class="chk-base">
+                                    <input type="checkbox" id="chk-b-2-2" />
+                                    <label for="chk-b-2-2">인공조명 유무</label>
+                                  </span>
+                                </li>
+                              </ul>
+                            </div>
+                            <ul class="tree-list">
+                              <li>
+                                <div class="inner">
+                                  <ul class="chk-wrap">
+                                    <li>
+                                      <span class="chk-base">
+                                        <input type="checkbox" id="chk-b-2-2-1" />
+                                        <label for="chk-b-2-2-1">인공조명</label>
+                                      </span>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <div class="inner">
+                              <a href="#" class="btn-toggle"></a>
+                              <ul class="chk-wrap">
+                                <li>
+                                  <span class="chk-base">
+                                    <input type="checkbox" id="chk-b-2-3" />
+                                    <label for="chk-b-2-3">구름의 양</label>
+                                  </span>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <a href="#" class="btn-toggle"></a>
+                          <ul class="chk-wrap">
+                            <li>
+                              <span class="chk-base">
+                                <input type="checkbox" id="chk-b-3" />
+                                <label for="chk-b-3">날씨</label>
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <a href="#" class="btn-toggle"></a>
+                          <ul class="chk-wrap">
+                            <li>
+                              <span class="chk-base">
+                                <input type="checkbox" id="chk-b-4" />
+                                <label for="chk-b-4">연결성</label>
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div><!-- .odd-tag-list -->
+          <div class="odd-tag-check">
+            <div class="input-wrap tit-btns">
+              <span class="tit">선택된 ODD 항목</span>
+              <div class="btns-wrap">
+                <span class="btn-base tp1 sm"><a href="#">삭제</a></span>
+              </div>
+            </div>
+            <div class="tb-wrap mt8">
+              <div class="tb-head">
+                <table summary="영상 ODD 태그 정보" class="tb-list">
+                  <colgroup>
+                    <col width="50" />
+                    <col width="*" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">
+                        <span class="chk-base chk-only chk-type-2">
+                          <input type="checkbox" id="chk-odd-all" />
+                          <label for="chk-odd-all">전체 체크</label>
+                        </span>
+                      </th>
+                      <th scope="col">ODD 태그 정보</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+              <div class="tb-body">
+                <table summary="영상 ODD 태그 정보" class="tb-list">
+                  <colgroup>
+                    <col width="50" />
+                    <col width="*" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <span class="chk-base chk-only">
+                          <input type="checkbox" id="chk-odd-1" />
+                          <label for="chk-odd-1">체크1</label>
+                        </span>
+                      </td>
+                      <td class="t-left">장면요소 > 구역 > 간섭구역 > 터널</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="chk-base chk-only">
+                          <input type="checkbox" id="chk-odd-2" />
+                          <label for="chk-odd-2">체크2</label>
+                        </span>
+                      </td>
+                      <td class="t-left">장면요소 > 교차로 > 횡단보도</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="chk-base chk-only">
+                          <input type="checkbox" id="chk-odd-3" />
+                          <label for="chk-odd-3">체크3</label>
+                        </span>
+                      </td>
+                      <td class="t-left">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십 <br />일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="chk-base chk-only">
+                          <input type="checkbox" id="chk-odd-4" />
+                          <label for="chk-odd-4">체크4</label>
+                        </span>
+                      </td>
+                      <td class="t-left">장면요소 > 구역 > 간섭구역 > 터널</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="chk-base chk-only">
+                          <input type="checkbox" id="chk-odd-5" />
+                          <label for="chk-odd-5">체크5</label>
+                        </span>
+                      </td>
+                      <td class="t-left">장면요소 > 구역 > 간섭구역 > 터널</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="chk-base chk-only">
+                          <input type="checkbox" id="chk-odd-6" />
+                          <label for="chk-odd-6">체크6</label>
+                        </span>
+                      </td>
+                      <td class="t-left">장면요소 > 구역 > 간섭구역 > 터널</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="chk-base chk-only">
+                          <input type="checkbox" id="chk-odd-7" />
+                          <label for="chk-odd-7">체크7</label>
+                        </span>
+                      </td>
+                      <td class="t-left">장면요소 > 구역 > 간섭구역 > 터널</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="chk-base chk-only">
+                          <input type="checkbox" id="chk-odd-8" />
+                          <label for="chk-odd-8">체크8</label>
+                        </span>
+                      </td>
+                      <td class="t-left">장면요소 > 교차로 > 횡단보도</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="chk-base chk-only">
+                          <input type="checkbox" id="chk-odd-9" />
+                          <label for="chk-odd-9">체크9</label>
+                        </span>
+                      </td>
+                      <td class="t-left">장면요소 > 구역 > 간섭구역 > 터널</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="chk-base chk-only">
+                          <input type="checkbox" id="chk-odd-10" />
+                          <label for="chk-odd-10">체크10</label>
+                        </span>
+                      </td>
+                      <td class="t-left">장면요소 > 구역 > 간섭구역 > 터널</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div><!-- .tb-wrap -->
+            <div class="paging-area">
+              <div class="total-area">
+                <span class="label">Total</span>
+                <span class="num"><strong>100</strong>개</span>
+              </div>
+              <div class="pagination">
+                <a href="#" class="btn-prev">이전</a>
+                <a href="#" class="on">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#" class="btn-next">다음</a>
+              </div>
+            </div>
+          </div><!-- .odd-tag-check -->
+        </div><!-- .odd-tag-form -->
+        <div class="btns-wrap t-center mt16">
+          <span class="btn-base tp1 md"><a href="#">초기화</a></span>
+          <span class="btn-base tp2 md"><a href="#">저장</a></span>
+        </div>
+      </div><!-- .con-wrap -->
+    </div><!-- .popup-wrap -->
+
+    
+  </div><!-- #wrapper -->
+
+  <script>
+    // 달력
+    tui.DatePicker.localeTexts['customKey'] = {
+    titles: {
+        // days
+        DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        // daysShort
+        D: ['일', '월', '화', '수', '목', '금', '토'],
+        // months
+        MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+        // monthsShort
+        MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+    },
+    titleFormat: 'yyyy.MMM',
+    todayFormat: '오늘 : yyyy.MMMM.dd',
+    date: 'Date',
+    time: 'Time'
+  };
+  var datepicker = new tui.DatePicker('.date_wrapper', {
+    language: 'customKey',
+    date: new Date(),
+    input: {
+      element: '#datepicker-input',
+      format: 'yyyy-MM-dd'
+    }
+  });
+
+  // 파일 업로드
+  $('.file-upload-area').find('input[type="file"]').on('change', function(){
+    var $target = $(this).closest('.file-upload-area');
+    if ($target.find('.info').length) {
+      $target.find('.info').remove();
+    }
+    var $fileList = $target.find('.file-list');
+    var fileValue = this.value.split('\\');  
+    $fileList.append(`<li><span class="filename">${fileValue[fileValue.length-1]}</span><a href="#" class="btn-del"></a></li>`);
+  });
+  $('.file-upload-area').on('click', '.btn-del', function(e){
+    e.preventDefault();
+    var $target = $(this).closest('.file-upload-area');
+    $(this).closest('li').remove();
+    if ($target.find('.file-list > li').length === 0) {
+      $target.find('.file-list').before('<span class="info">이동식 영상 파일 <em>1개</em>, GPS파일(TXT) <em>1개</em>까지 등록 가능합니다.</span>');
+    }
+  });
+
+  function changeType1() {
+    $('.radio_type_area > .input-flex > .radio-list').show();
+    $('.radio_type_area > .input-flex > .result-info').hide();
+    $('.radio_type_area > .form-list-tp1').show();
+    $('.radio_type_area > .form-list-tp2').hide();
+  }
+  function changeType2() {
+    $('.radio_type_area > .input-flex > .radio-list').hide();
+    $('.radio_type_area > .input-flex > .result-info').show();
+    $('.radio_type_area > .form-list-tp1').hide();
+    $('.radio_type_area > .form-list-tp2').show();
+  }
+
+  if ($('#radio_button_type1').is(':checked')) {
+    changeType1();
+  } else if ($('#radio_button_type2').is(':checked')) {
+    changeType2();
+  }
+
+  $('#radio_button_type1').on('click', function(){
+    changeType1();
+  });
+  $('#radio_button_type2').on('click', function(){
+    changeType2();
+  });
+
+  $('#radio-autosave-1').on('click', function(){
+    $.magnificPopup.open({
+      items: {
+        src: '#popup-weather-api',
+        type: 'inline',
+      },
+      fixedContentPos: true,
+      fixedBgPos: true,
+      overflowY: 'auto',
+      closeBtnInside: true,
+      preloader: false,
+      midClick: true,
+      removalDelay: 300,
+      mainClass: 'mfp-zin'
+    });
+  });
+
+  // 기상정보 API 팝업
+  var callbackChkTypeApi = function(checked){
+    console.log('테이블 전체체크 유무 : ', checked)
+  };
+  GUI.checkAllUI('#chk-all', callbackChkTypeApi);
+  
+  $('#popup-weather-api .btn-base:contains("API호출")').on('click', function(e){
+    e.preventDefault();
+    $(this).addClass('disabled');
+    $('#mock_api_check').hide();
+    $('#mock_api_result').show();
+  });
+
+  // 영상 ODD 태그 정보
+  // $('.odd-tag-form .tree-wrap > dl > dd').addClass('c-scrollbar');
+  // $('.odd-tag-form .tree-wrap:eq(0)').addClass('on');
+  // var callbackChkTypeOddTag = function(checked){
+  //   console.log('테이블 전체체크 유무 : ', checked)
+  // };
+  // GUI.checkAllUI('#chk-odd-all', callbackChkTypeOddTag);
+  // $('#popup-regist-odd-tag .btns-wrap .btn-base.tp2').on('click', function(e){
+  //   e.preventDefault();
+  //   $('#regist-odd-tag .input-wrap:eq(0)').hide();
+  //   $('#regist-odd-tag .input-wrap:eq(1)').show();
+  //   $.magnificPopup.close();
+  // });
+
+  $('.input-wrap.regist-tag .btn-base a').on('click', function(e){
+    e.preventDefault();
+    var $target = $(this).closest('.regist-tag-area');
+    var $input = $target.find('.input-base');
+    if ($input.val().length > 0) {
+      if ($target.find('.file-list > li').length < 5) {
+        $target.find('.file-list').append(`<li><span class="filename">${'#'+$input.val()}</span><a href="#" class="btn-del"></a></li>`)
+        $target.find('.input-wrap.active').removeClass('active');
+        $input.val('');
+      }
+      if ($target.find('.file-list > li').length == 5) {
+        $target.find('.input-wrap .input-base').addClass('disabled').prop('readonly', true);
+      }
+    }
+  });
+  $('.regist-tag-area').on('click', '.btn-del', function(e){
+    e.preventDefault();
+    var $target = $(this).closest('.regist-tag-area');
+    $(this).closest('li').remove();
+    if ($(this).closest('li').length < 5) {
+      $target.find('.input-wrap .input-base').removeClass('disabled').prop('readonly', false);
+    }
+  })
+
+  var queryLnb = $.urlParam('lnb');
+  var queryTooltip = $.urlParam('tooltip');
+  var queryType = $.urlParam('type');
+  var queryPopup = $.urlParam('popup');
+  var queryApi = $.urlParam('api');
+  
+  if (Boolean(queryLnb)) {
+    setTimeout(function(){
+      $('.lnb-wrap .btn-menu').click();
+    }, 250);
+  }
+  if (Boolean(queryTooltip)) {
+    setTimeout(function(){
+      $('.regist-form .input-flex .tit .btn-tip').click();
+    }, 250);
+  }
+  if (queryType == 'fixed') {
+    setTimeout(function(){
+      $('#radio_button_type2').click();
+    }, 250);
+  }
+
+  if (queryPopup) {
+    setTimeout(function(){
+      if (queryPopup == 'weatherInfo') {
+        $('#radio-autosave-1').click();
+        if (Boolean(queryApi)) {
+          $('#popup-weather-api .btn-base:contains("API호출")').click();
+        }
+      } else if (queryPopup == 'fixedVideoInfo') {
+        $('[href="#popup-fixed-video-info"]').click();
+      } else if (queryPopup == 'enviromentInfo') {
+        $('[href="#popup-enviroment-info"]').click();
+      } else if (queryPopup == 'notice') {
+        $.magnificPopup.open({
+          items: {
+            src: '#popup-notice',
+            type: 'inline',
+          },
+          fixedContentPos: true,
+          fixedBgPos: true,
+          overflowY: 'auto',
+          closeBtnInside: true,
+          preloader: false,
+          midClick: true,
+          removalDelay: 300,
+          mainClass: 'mfp-zin'
+        });
+      } else if (queryPopup == 'registOddTag') {
+        $('[href="#popup-regist-odd-tag"]').click();
+      }
+    }, 250);
+  }
+  </script>
+</body>
+</html>

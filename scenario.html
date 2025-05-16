@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> ITSK 주행환경 </title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body class="c-scrollbar">
+  <div id="wrapper">
+    <div id="container">
+      <div class="lnb-wrap">
+        <h1><a href="#"></a></h1>
+        <a href="#" class="btn-menu"></a>
+        <h2 class="hide">메뉴</h2>
+        <ul class="lnb" data-active="2">
+          <li class="drive">
+            <a href="#">
+              <span class="ico"></span>
+              <span class="text">주행환경 검색</span>
+            </a>
+          </li>
+          <li class="scenario">
+            <a href="#">
+              <span class="ico"></span>
+              <span class="text">시나리오 통계</span>
+            </a>
+          </li>
+          <li class="video">
+            <a href="#">
+              <span class="ico"></span>
+              <span class="text">영상정보 등록</span>
+            </a>
+          </li>
+          <li class="history">
+            <a href="#">
+              <span class="ico"></span>
+              <span class="text">영상정보 이력</span>
+            </a>
+          </li>
+          <li class="data">
+            <a href="#">
+              <span class="ico"></span>
+              <span class="text">데이터 모니터링</span>
+            </a>
+          </li>
+        </ul>
+        <a href="#" class="btn-logout"></a>
+      </div><!-- .lnb-wrap -->
+      <div class="content-wrap">
+        <div class="tit-area">
+          <h3 class="scenario">시나리오 통계</h3>
+          <div class="update-info">
+            <p>업데이트일 : <strong>2023.09.21</strong></p>
+          </div>
+        </div>
+        <div class="con-top-area">
+          <p class="info">시나리오 유형별 집계된 통계정보를 표출합니다.</p>
+          <div class="input-wrap">
+            <span class="label">유형</span>
+            <span class="select-base" style="width: 130px;">
+              <span class="value"></span>
+              <select>
+                <option value="0">선택</option>
+                <option value="1" selected>주행</option>
+                <option value="2">Value 2</option>
+                <option value="3">Value 3</option>
+              </select>
+            </span>
+            <span class="btn-base tp1 md search"><a href="#"><span class="ico search front">조회</span></a></span>
+          </div>
+        </div><!-- .con-top-area -->
+        <ul class="chart-list-area">
+          <li>
+            <h4 class="tit">ego차량의 차로별 주행속도</h4>
+            <div class="chart-detail-area" style="height: 230px;"></div>
+          </li>
+          <li>
+            <h4 class="tit">ego차량의 차로별 주행속도</h4>
+            <div class="chart-detail-area" style="height: 230px;"></div>
+          </li>
+          <li>
+            <h4 class="tit">ego차량의 차로별 주행속도</h4>
+            <div class="chart-detail-area" style="height: 230px;"></div>
+          </li>
+        </ul><!-- .chart-list-area -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+    <div class="loading-dimm"></div>
+    <div class="loading-wrp"><div class="loader"></div></div>
+  </div><!-- #wrapper -->
+  <script>
+    $('.tb-wrap .th-tip .btn-tip').on('click', function(){
+      if ($(this).hasClass('on')) {
+        $('.tb-wrap .tip-area').hide();
+      }
+    });
+    $('.tb-wrap .tip-area .btn-close').on('click', function(){
+      $('.tb-wrap .th-tip .btn-tip.on').removeClass('on');
+    });
+    
+    var queryLnb = $.urlParam('lnb');
+    var queryTooltip = $.urlParam('tooltip');
+
+    if (Boolean(queryTooltip)) {
+      setTimeout(function(){
+        $('[href="#tip-progress"]').click();
+      }, 500);
+    }
+    if (Boolean(queryLnb)) {
+      setTimeout(function(){
+        $('.lnb-wrap .btn-menu').click();
+      }, 250);
+    }
+  </script>
+</body>
+</html>
