@@ -153,3 +153,22 @@
 .chart-list-area > li:first-of-type{margin-top:0;}
 .chart-list-area > li .tit{font-size:16px;line-height:1.5;color:#181818;font-weight:600;}
 .chart-detail-area{padding:12px;background-color:#fff;border-radius:8px;margin-top:8px;}
+
+/* 2025-12 */
+.login-form-area .other-menu{display:flex;justify-content: center;margin-top:16px;gap:16px;}
+.login-form-area .other-menu a{font-size:13px;font-weight:600;color:#38393b;text-decoration: underline;}
+.login-form-area .sns-menu{margin-top:16px;}
+.login-form-area .sns-menu li{margin-top:8px;}
+.login-form-area .sns-menu li:first-child{margin-top:0;}
+.login-form-area .sns-menu li a{display:block;border-radius:4px;padding:12px;text-align:center;font-size:14px;font-weight:600;}
+.login-form-area .sns-menu li span{display:flex;align-items: center;gap:4px;justify-content: center;}
+.login-form-area .sns-menu li span::before{content:'';display:block;width:16px;height:16px;}
+.login-form-area .sns-menu li.naver a{background-color:#21c806;color:#fff;}
+.login-form-area .sns-menu li.kakao a{background-color:#ffeb04;color:#3b1f1e;}
+.login-form-area .sns-menu li.naver span::before{background:url('../img/icon/ico-naver.svg') 50% 50% no-repeat;}
+.login-form-area .sns-menu li.kakao span::before{background:url('../img/icon/ico-kakao.svg') 50% 50% no-repeat;}
+.login-form-area#signup{width:600px;}
+.login-form-area#signup .login-form{width:100%;}
+.login-form-area#signup .login-form > .input-wrap{margin-top:17px;}
+.login-form-area#signup .input-wrap > .input-list{width:100%;}
+.login-form-area#signup .input-wrap > .input-list > li{width:100%;}

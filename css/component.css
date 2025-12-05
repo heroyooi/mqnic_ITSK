@@ -126,6 +126,9 @@
 .btns-wrap.col2 .radio-base.radio-button{width:calc(50% - 4px);text-align:center;}
 .btns-wrap.col2 .radio-base.radio-button input + label{width:100%;}
 .btns-wrap.col2 .radio-base.radio-button input + label:before{left:37px;}
+.btns-wrap.w-full{display:flex;gap:0 8px;}
+.btns-wrap.w-full .btn-base{margin-left:0;flex:1 1 auto;}
+.btns-wrap.w-full .btn-base > *{width:100%;}
 
 .btn-del, .btn-search, .btn-tip, .btn-refresh, .btn-filter, .btn-back, .btn-delete{display:inline-block;font-size:0;}
 .btn-del{width:12px;height:12px;background:url(../img/icon/ic_del_b_mini.svg) 50% 50% no-repeat;}
@@ -486,3 +489,13 @@
     box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5), -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
+
+/* 2025-12 */
+.input-wrap > .input-list > li.ver_form{display:block;}
+.input-wrap > .input-list > li.ver_form .input-item-wrap{display:flex;align-items:center;}
+.input-wrap > .input-list > li.ver_form .input-item-wrap .tit{min-width:90px;}
+.input-wrap > .input-list > li.ver_form .input-item-wrap .input-item{display:flex;align-items:center;flex:1 1 auto;gap:8px;}
+.input-wrap > .input-list > li.ver_form .input-item-wrap .input-item .input-wrap{flex:1 1 auto;margin-left:0;}
+.input-wrap > .input-list > li.ver_form .input-item-wrap .input-item .btn-base{flex-shrink: 0;}
+.input-wrap > .input-list > li.ver_form .s-tip{padding-left:90px;}
+.input-wrap > .input-list > li .s-tip{font-size:14px;color:#6f747d;margin-top:5px;line-height:1.5;}
