@@ -115,6 +115,12 @@ body{width:100%;}
 .lnb-wrap .lnb li.faq a .ico{background-image:url(../img/lnb/new/icon-ic-menu-qna-enabl.svg);}
 .lnb-wrap .lnb li.faq a:hover .ico, .lnb-wrap .lnb li.faq.on a .ico{background-image:url(../img/lnb/new/icon-ic-menu-qna-hover.svg);}
 
+.lnb-wrap .lnb li.guide a .ico{background-image:url(../img/lnb/new/icon-ic-menu-guide-enabl.svg);}
+.lnb-wrap .lnb li.guide a:hover .ico, .lnb-wrap .lnb li.guide.on a .ico{background-image:url(../img/lnb/new/icon-ic-menu-guide-hover.svg);}
+
+.lnb-wrap .lnb li.video a .ico{background-image:url(../img/lnb/new/icon-ic-menu-video-enabl.svg);}
+.lnb-wrap .lnb li.video a:hover .ico, .lnb-wrap .lnb li.video.on a .ico{background-image:url(../img/lnb/new/icon-ic-menu-video-hover.svg);}
+
 .lnb-wrap .lnb li.contact a .ico{background-image:url(../img/lnb/new/icon-ic-menu-contact-enabl.svg);}
 .lnb-wrap .lnb li.contact a:hover .ico, .lnb-wrap .lnb li.contact.on a .ico{background-image:url(../img/lnb/new/icon-ic-menu-contact-hover.svg);}
 .content-wrap .tit-area h3.intro:before{background:url(../img/icon/new/icon-ic-introduction.svg) 50% 50% no-repeat;}
